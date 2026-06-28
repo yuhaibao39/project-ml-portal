@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: property-market-analysis
+  cache:
+    type: caffeine
+    caffeine:
+      spec: maximumSize=500,expireAfterWrite=300s
+
+ml:
+  service:
+    url: http://ml-service:8001
+
+logging:
+  level:
+    com.property.market: DEBUG
+    org.springframework.cache: TRACE
